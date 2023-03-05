@@ -120,19 +120,19 @@ public class SpotifyRepository {
 
           songs.add(song);
 
-          List<Song> l = albumSongMap.get(album1);
-          l.add(song);
-          albumSongMap.put(album1,l);
+//          List<Song> l = albumSongMap.get(album1);
+//          l.add(song);
+//          albumSongMap.put(album1,l);
 
-//          if(albumSongMap.containsKey(album)){
-//              List<Song> l = albumSongMap.get(album);
-//              l.add(song);
-//              albumSongMap.put(album,l);
-//          }else{
-//              List<Song> songList = new ArrayList<>();
-//              songList.add(song);
-//              albumSongMap.put(album,songList);
-//          }
+          if(albumSongMap.containsKey(album1)){
+              List<Song> l = albumSongMap.get(album1);
+              l.add(song);
+              albumSongMap.put(album1,l);
+          }else{
+              List<Song> songList = new ArrayList<>();
+              songList.add(song);
+              albumSongMap.put(album1,songList);
+          }
 
          return song;
       }
